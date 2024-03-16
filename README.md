@@ -1,1 +1,0 @@
-# gitops-e2e-production-pipeline

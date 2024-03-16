@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: complete-e2e-production-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: complete-e2e-production-app
+      env: prod
+  template:
+    metadata:
+      labels:
+        app: complete-e2e-production-app
+        env: prod
+    spec:
+      containers:
+      - name: complete-e2e-production-app
+        image: popeschmidt/production-e2e-pipeline:1.0.0-43
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8080

@@ -19,7 +19,7 @@ spec:
         image: popeschmidt/production-e2e-pipeline:latest
         resources:
           limits:
-            memory: "128Mi"
+            memory: "256Mi"
             cpu: "500m"
         ports:
         - containerPort: 8080

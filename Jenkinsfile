@@ -39,7 +39,7 @@ pipeline{
                 git commit -m "Updated Deployment manifest"
                 """
 
-                withCredentials([gitUsernamePassword(crednetialsId: 'github', gitToolName: 'Default')]){
+                withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]){
                     sh "git push https://github.com/Rippyblogger/gitops-e2e-production-pipeline main"
                 }
             }

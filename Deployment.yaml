@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: complete-e2e-production-app
-        image: popeschmidt/production-e2e-pipeline:latest
+        image: popeschmidt/production-e2e-pipeline:
         resources:
           limits:
             memory: "256Mi"
